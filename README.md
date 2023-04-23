@@ -26,6 +26,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Observe SSH Traffic
 - Observe DHCP Traffic
 - Observe DNS Traffic
+- Observe RDP Traffic
 
 <h2>Prerequisites</h2>
 
@@ -187,26 +188,36 @@ Enter any Linux commands in Powershell ad observe the traffic, type 'exit' to cl
 <h3>Observe DHCP Traffic</h3>
 
 <p>
-
+Change filter to 'DHCP' and in Powershell type 'ipconfig /new' and observe
 </p>
 <p>
-<img src="https://i.imgur.com/vvGJNec.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/a91pnhw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<br />
+
+<h3>Observe DNS Traffic</h3>
+
+<p>
+Filter for dns traffic and type 'nslookup google.com' and observe (one of) Google's public IP
+</p>
+<p>
+<img src="https://i.imgur.com/Y8bhn33.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<br />
+
+<h3>Observe RDP Traffic</h3>
+
+<p>
+Type 'tcp.port == 3389' to fulter for RDP packets
+</p>
+<p>
+<img src="https://i.imgur.com/KanTAQW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <br />
 
 <p>
-
-</p>
-<p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-
-<br />
-
-<p>
-
-</p>
-<p>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Observe constant flow of packets as we are using RDP to connect to the VM
 </p>
